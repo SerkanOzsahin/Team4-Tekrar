@@ -1,11 +1,12 @@
+package Merve;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Merve {
+public class _1 {
     public static void main(String[] args) {
-
         WebDriver chromeDriver = new ChromeDriver();
         chromeDriver.get("https://demoqa.com/text-box");
         chromeDriver.manage().window().maximize();
@@ -13,7 +14,7 @@ public class Merve {
 
         WebElement fullname = chromeDriver.findElement(By.id("userName"));
         Wait(3);
-        fullname.sendKeys("Merve Çelebi");
+        fullname.sendKeys("Merve.Merve Çelebi");
 
         WebElement email = chromeDriver.findElement(By.id("userEmail"));
         Wait(3);
@@ -30,8 +31,6 @@ public class Merve {
         WebElement submitButton = chromeDriver.findElement(By.id("submit"));
         Wait(3);
         submitButton.click();
-
-
     }
 
     public static void Wait(int saniye) {

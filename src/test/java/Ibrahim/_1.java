@@ -1,13 +1,13 @@
+package Ibrahim;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Ibrahim {
+public class _1 {
     public static void main(String[] args) {
-
         WebDriver driver = new ChromeDriver();
-
         driver.get("https://demoqa.com/text-box");
         driver.manage().window().maximize();
         Wait(5);
@@ -28,16 +28,12 @@ public class Ibrahim {
         permanentAdress.sendKeys("Permanent Adress");
         Wait(3);
 
-
         WebElement submitBtn = driver.findElement(By.id("submit"));
         submitBtn.click();
         Wait(1);
-
     }
 
     public static void Wait(int seconds) {
-
-
         try {
             Thread.sleep(seconds * 1000L);
         } catch (InterruptedException e) {
@@ -45,5 +41,3 @@ public class Ibrahim {
         }
     }
 }
-
-
