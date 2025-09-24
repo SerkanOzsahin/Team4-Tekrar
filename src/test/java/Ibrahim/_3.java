@@ -1,11 +1,9 @@
 package Ibrahim;
 
 import Utilities.BaseDriver;
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -13,9 +11,8 @@ import java.time.Duration;
 
 public class _3 {
     public static void main(String[] args) {
-
         WebDriver driver = BaseDriver.driver("https://practicetestautomation.com/");
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
         WebElement practiceBtn = driver.findElement(By.cssSelector("ul .menu-item-20"));
         wait.until(ExpectedConditions.elementToBeClickable(practiceBtn));
@@ -47,7 +44,8 @@ public class _3 {
         WebElement passwordSent = driver.findElement(By.cssSelector("input[type='password']"));
         passwordSent.sendKeys(password);
 
-        WebElement submitBtn = driver.findElement(By.cssSelector("button[id='submit']"));;
+        WebElement submitBtn = driver.findElement(By.cssSelector("button[id='submit']"));
+
         wait.until(ExpectedConditions.elementToBeClickable(submitBtn));
         submitBtn.click();
 
